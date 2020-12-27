@@ -1,5 +1,9 @@
 use iced::{button, Align, Button, Row, Element, Sandbox, Settings, Text, HorizontalAlignment, Length};
 
+// the window size is an unsigned 32 bit integer, the padding is unsigned 16 bit integer
+const SIZE: (u32, u32) = (250, 80);
+const PAD: u16 = 25;
+
 pub fn main() -> iced::Result{
     // Set the window properties
     let mut settings = Settings::default();
@@ -10,12 +14,9 @@ pub fn main() -> iced::Result{
     Counter::run(settings)
 }
 
-// the window size is an unsigned 32 bit integer, the padding is unsigned 16 bit integer
-const SIZE: (u32, u32) = (250, 80);
-const PAD: u16 = 25;
 
 #[derive(Default)]
-pub struct Counter {
+struct Counter {
     // counter value
     value: i32,
     btn: button::State,
@@ -23,7 +24,7 @@ pub struct Counter {
 
 // define the possible interactions of the application
 #[derive(Debug, Clone, Copy)]
-pub enum Message {
+enum Message {
     ButtonPressed,
 }
 

@@ -1,3 +1,6 @@
-fn main() {
-    println!("Hello, world!");
+mod counter;
+
+fn main() -> iced::Result {
+    counter::main()
 }
+

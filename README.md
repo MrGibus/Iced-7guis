@@ -3,8 +3,8 @@
 
 
 
-### Counter (Not started)  
-
+### Counter  
+![image](images/Counter.PNG)
 
 
 ### Temperature (Not started)  

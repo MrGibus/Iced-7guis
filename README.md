@@ -13,9 +13,9 @@
 
 ![temperature](images/Temp.PNG)
 
-### Flight Booker (Not started)  
+### Flight Booker 
 
-
+![flights](images/Flights.PNG)
 
 ### Timer (Not started)  
 

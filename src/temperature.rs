@@ -1,4 +1,4 @@
-use iced::{button, Align, Button, Row, Element, Sandbox, Settings, Text, HorizontalAlignment, Length, TextInput, Space};
+use iced::{Align, Row, Element, Sandbox, Settings, Text, HorizontalAlignment, Length, TextInput, Space};
 use iced::{text_input};
 
 // the window size is an unsigned 32 bit integer, the padding is unsigned 16 bit integer
@@ -87,7 +87,7 @@ impl Sandbox for Temperature {
 }
 
 fn c_to_f(s: String) -> String {
-    return if let Ok(c) = s.parse::<f64>() {
+    if let Ok(c) = s.parse::<f64>() {
         let f = c * ( 9. /  5.) + 32.;
         format!("{:.1}", f)
     } else {
@@ -96,7 +96,7 @@ fn c_to_f(s: String) -> String {
 }
 
 fn f_to_c(s: String) -> String {
-    return if let Ok(f) = s.parse::<f64>() {
+    if let Ok(f) = s.parse::<f64>() {
         let c = (f - 32.) * (5. / 9.);
         format!("{:.1}", c)
     } else {

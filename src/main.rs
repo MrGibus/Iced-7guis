@@ -1,16 +1,17 @@
 mod counter;
 mod temperature;
+mod flights;
 
 // fn main() -> iced::Result {
 //     // counter::main()
-//     temperature::main()
+//     // temperature::main()
+//     // flights::main()
 // }
-
 
 use std::io;
 
 /// Entry point into program
-pub fn main() {
+pub fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Enter example 1 - 7");
     println!("1: Counter");
     println!("2: Temperature Converter");
@@ -32,15 +33,15 @@ pub fn main() {
     match v {
         1 => {
             println!("Counter Selected");
-            counter::main();
+            counter::main()?
         },
         2 => {
             println!("Temperature Converter Selected");
-            temperature::main();
+            temperature::main()?
         },
         3 => {
             println!("Flight Booker Selected");
-            println!("NOT YET IMPLEMENTED");
+            flights::main()?
         },
         4 => {
             println!("Timer Selected");
@@ -59,5 +60,6 @@ pub fn main() {
             println!("NOT YET IMPLEMENTED");
         },
         _ => ()
-    }
+    };
+    Ok(())
 }

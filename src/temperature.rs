@@ -59,14 +59,16 @@ impl Sandbox for Temperature {
             "",
             &self.c_value,
                 Message::CUpdated
-        );
+        )
+            .padding(5);
 
         let f_in = TextInput::new(
             &mut self.f_state,
             "",
             &self.f_value,
             Message::FUpdated
-        );
+        )
+            .padding(5);
 
         Row::new()
             .padding(PAD)

@@ -17,8 +17,8 @@
 
 ![flights](images/Flights.PNG)
 
-### Timer (Not started)  
-
+### Timer
+![timer](images/Timer.PNG)
 
 
 ### CRUD (Not started)  

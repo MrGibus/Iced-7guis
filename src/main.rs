@@ -1,17 +1,19 @@
 mod counter;
 mod temperature;
 mod flights;
+mod timer;
 
-// fn main() -> iced::Result {
-//     // counter::main()
-//     // temperature::main()
-//     // flights::main()
-// }
+fn main() -> iced::Result {
+    // counter::main()
+    // temperature::main()
+    // flights::main()
+    timer::main()
+}
 
 use std::io;
 
 /// Entry point into program
-pub fn main() -> Result<(), Box<dyn std::error::Error>> {
+pub fn main2() -> Result<(), Box<dyn std::error::Error>> {
     println!("Enter example 1 - 7");
     println!("1: Counter");
     println!("2: Temperature Converter");
@@ -60,6 +62,6 @@ pub fn main() -> Result<(), Box<dyn std::error::Error>> {
             println!("NOT YET IMPLEMENTED");
         },
         _ => ()
-    };
+    }
     Ok(())
 }

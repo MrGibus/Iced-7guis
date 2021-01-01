@@ -21,7 +21,10 @@
 ![timer](images/Timer.PNG)
 
 
-### CRUD
+### CRUD  
+*The radio buttons could be reskinned while maintaining the same functionality*  
+*Bug: issue with the draw order of radio buttons and outline of a container*  
+  
 ![crud](images/CRUD.PNG)
 
 

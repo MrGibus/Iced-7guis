@@ -2,18 +2,19 @@ mod counter;
 mod temperature;
 mod flights;
 mod timer;
+mod crud;
 
-fn main() -> iced::Result {
-    // counter::main()
-    // temperature::main()
-    // flights::main()
-    timer::main()
-}
+// fn main() -> iced::Result {
+//     // counter::main()
+//     // temperature::main()
+//     // flights::main()
+//     crud::main()
+// }
 
 use std::io;
 
 /// Entry point into program
-pub fn main2() -> Result<(), Box<dyn std::error::Error>> {
+pub fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Enter example 1 - 7");
     println!("1: Counter");
     println!("2: Temperature Converter");
@@ -47,11 +48,11 @@ pub fn main2() -> Result<(), Box<dyn std::error::Error>> {
         },
         4 => {
             println!("Timer Selected");
-            println!("NOT YET IMPLEMENTED");
+            timer::main()?
         },
         5 => {
             println!("CRUD Selected");
-            println!("NOT YET IMPLEMENTED");
+            crud::main()?
         },
         6 => {
             println!("Circle drawer Selected");
